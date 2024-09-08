@@ -1,7 +1,7 @@
 
 import React from 'react'
-import {Link} from 'react-router-dom'
-import appwriteService from '../appwrite/config '
+import { Link } from 'react-router-dom';
+import service from '../appwrite/config';
 
 function PostCard({
  $id,
@@ -10,14 +10,14 @@ function PostCard({
 }) {
     const id=useId();
   return (
-   <link to={`/post/${id}`}>
+   <Link to={`/post/${id}`}>
     <div className="w-full ">
-        <div className={appwriteService.getFilePreview(featuredImage)}  alt={title}>
+        <div className={service.getFilePreview(featuredImage)}  alt={title}>
             <img></img>
         </div>
         <h2 className='text-xl font-bold'> {title}</h2>
     </div>
-   </link>
+   </Link>
   )
 }
 

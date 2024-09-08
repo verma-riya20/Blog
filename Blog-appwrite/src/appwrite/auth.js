@@ -41,14 +41,15 @@ export class AuthService{
             return await this.account.get()
             
         } catch (error) {
-            console.log("error")
+             console.log("error")
             
         }
+        return null
     }
 
     async logout(){
        try {
-        return await this.account.deleteSessions()
+         await this.account.deleteSessions()
        } catch (error) {
         console.log("error")
        }
